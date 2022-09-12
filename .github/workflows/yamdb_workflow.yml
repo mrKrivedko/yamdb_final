@@ -32,6 +32,7 @@ jobs:
         # запуск проверки проекта по flake8
         python -m flake8
         # python pytest потом раскомментировать
+        cd api_yamdb
   
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
