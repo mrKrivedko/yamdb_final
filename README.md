@@ -9,7 +9,9 @@ http://62.84.124.198/api/v1/
 Пользователи могут оставлять рецензии на произведения, а также комментировать эти рецензии.
 Администрация добавляет новые произведения и категории (книга, фильм, музыка и т.д.)
 Также присутствует файл docker-compose, позволяющий , быстро развернуть контейнер базы данных (PostgreSQL), контейнер проекта django + gunicorn и контейнер nginx
-## Как запустить
+
+## Технологии используемые в проекте
+Python, Django, Django REST Framework, PostgreSQL, Nginx, Docker, GitHub Actions
 
 ## Необходимое ПО
 
@@ -33,10 +35,13 @@ DB_HOST='..'
 
 DB_PORT='..'
 
-после сборки контейнера выполнить миграции: docker compose exec web python manage.py migrate
+после сборки контейнера выполнить миграции: *docker compose exec web python manage.py migrate*
 
-после сборки контейнера выполнить миграции: docker compose exec web python manage.py createsuperuser
+после сборки контейнера выполнить миграции: *docker compose exec web python manage.py createsuperuser*
 
-после сборки контейнера выполнить миграции: docker compose exec web python manage.py collectstatic --no-input
+после сборки контейнера выполнить миграции: *docker compose exec web python manage.py collectstatic --no-input*
 
-для загрузки дампа: docker compose exec web python manage.py loaddata fixtures.json
+для загрузки дампа: *docker compose exec web python manage.py loaddata fixtures.json*
+
+## Реализовал проект:
+Борис Седельников (https://github.com/mrKrivedko)
